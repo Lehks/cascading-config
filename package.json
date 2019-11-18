@@ -12,7 +12,7 @@
     "scripts": {
         "test": "NODE_ENV='test' jest --coverage",
         "build": "tsc",
-        "prepublish": "npm run-script build"
+        "prepare": "npm run-script build"
     },
     "repository": {
         "type": "git",

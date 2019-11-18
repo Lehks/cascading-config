@@ -1,3 +1,3 @@
-import config from './lib/config';
+import config = require('./lib/config');
 
 export = config;
