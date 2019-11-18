@@ -1,0 +1,29 @@
+{
+    "name": "cascading-config",
+    "version": "1.0.0",
+    "description": "A config module for NodeJS",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV='test' jest --coverage",
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lehks/cascading-config.git"
+    },
+    "author": "Lukas Reichmann",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Lehks/cascading-config/issues"
+    },
+    "homepage": "https://github.com/Lehks/cascading-config#readme",
+    "dependencies": {
+        "@types/app-root-path": "^1.2.4",
+        "@types/lodash": "^4.14.148",
+        "@types/node": "^12.12.8",
+        "ajv": "^6.10.2",
+        "app-root-path": "^3.0.0",
+        "lodash": "^4.17.15",
+        "typescript": "^3.7.2"
+    }
+}
