@@ -9,6 +9,7 @@
         "strict": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
+        "declaration": true,
         "plugins": [
             {
                 "name": "typescript-tslint-plugin",
@@ -20,9 +21,8 @@
         ]
     },
     "include": [
-        "app/**/*",
-        "app/typings/express.d.ts",
-        "app/**/*.json"
+        "lib/**/*",
+        "index.ts"
     ],
     "exclude": [
         "node_modules",

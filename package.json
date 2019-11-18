@@ -2,10 +2,17 @@
     "name": "cascading-config",
     "version": "1.0.0",
     "description": "A config module for NodeJS",
-    "main": "index.js",
+    "keywords": [
+        "config",
+        "nodejs",
+        "cascading"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "test": "NODE_ENV='test' jest --coverage",
-        "build": "tsc"
+        "build": "tsc",
+        "prepublish": "npm run-script build"
     },
     "repository": {
         "type": "git",
@@ -18,12 +25,33 @@
     },
     "homepage": "https://github.com/Lehks/cascading-config#readme",
     "dependencies": {
-        "@types/app-root-path": "^1.2.4",
-        "@types/lodash": "^4.14.148",
-        "@types/node": "^12.12.8",
         "ajv": "^6.10.2",
         "app-root-path": "^3.0.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.15"
+    },
+    "devDependencies": {
+        "@types/app-root-path": "^1.2.4",
+        "@types/jest": "^24.0.23",
+        "@types/lodash": "^4.14.148",
+        "@types/node": "^12.12.8",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "tslint": "^5.20.1",
         "typescript": "^3.7.2"
+    },
+    "jest": {
+        "modulePathIgnorePatterns": [
+            "/dist/"
+        ],
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "clearMocks": true,
+        "coverageDirectory": "coverage",
+        "coverageReporters": [
+            "json",
+            "lcov",
+            "clover"
+        ]
     }
 }
